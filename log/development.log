@@ -451,3 +451,1220 @@ Migrating to AddForeignKeyToFoods (20180410165216)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   ↳ db/seeds.rb:22
   [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-04-10 19:35:41 -0400
+  [1m[35m (11.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/railties-5.2.0.rc2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/railties-5.2.0.rc2/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 35ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 19:35:47 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/railties-5.2.0.rc2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/railties-5.2.0.rc2/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-04-10 19:35:52 -0400
+Processing by FoodsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food" for 127.0.0.1 at 2018-04-10 19:36:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/food"):
+  
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc2) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/foods" for 127.0.0.1 at 2018-04-10 19:36:07 -0400
+Processing by FoodsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-04-10 19:37:59 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:3
+Completed 200 OK in 115ms (Views: 73.8ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-04-10 19:40:46 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:3
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-04-10 19:40:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc2) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/foods" for 127.0.0.1 at 2018-04-10 19:42:11 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:3
+Completed 500 Internal Server Error in 175ms (Views: 10.4ms | ActiveRecord: 15.4ms)
+
+
+  
+NameError (undefined local variable or method `songs' for #<FoodsController:0x00007f85e5b09ad8>):
+  
+app/controllers/foods_controller.rb:4:in `index'
+Started GET "/foods" for 127.0.0.1 at 2018-04-10 19:42:51 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 59ms (Views: 10.9ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/foods/1" for 127.0.0.1 at 2018-04-10 20:04:07 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for FoodsController):
+  
+actionpack (5.2.0.rc2) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.0.rc2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0.rc2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0.rc2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0.rc2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0.rc2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0.rc2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0.rc2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0.rc2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.2.0.rc2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0.rc2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc2) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/foods/1" for 127.0.0.1 at 2018-04-10 20:04:17 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 404 Not Found in 129ms (ActiveRecord: 15.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Food with 'id'=1):
+  
+app/controllers/foods_controller.rb:8:in `show'
+Started GET "/foods/2" for 127.0.0.1 at 2018-04-10 20:04:22 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods/4" for 127.0.0.1 at 2018-04-10 20:04:27 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods/2" for 127.0.0.1 at 2018-04-10 20:04:32 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods/4" for 127.0.0.1 at 2018-04-10 20:04:38 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods/5" for 127.0.0.1 at 2018-04-10 20:04:41 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Food with 'id'=5):
+  
+app/controllers/foods_controller.rb:8:in `show'
+Started GET "/foods/2" for 127.0.0.1 at 2018-04-10 20:04:53 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/foods/2" for 127.0.0.1 at 2018-04-10 20:05:39 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/foods/2" for 127.0.0.1 at 2018-04-10 20:05:41 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/foods/3" for 127.0.0.1 at 2018-04-10 20:05:51 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods/3" for 127.0.0.1 at 2018-04-10 20:05:57 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods/3" for 127.0.0.1 at 2018-04-10 20:07:01 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:9
+Completed 200 OK in 44ms (Views: 0.5ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/foods/2" for 127.0.0.1 at 2018-04-10 20:07:06 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:9
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods/4" for 127.0.0.1 at 2018-04-10 20:07:51 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 42ms (Views: 0.4ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 14:43:17 -0400
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:15
+  [1m[36mStorage Load (41.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:15
+  [1m[36mContainer Load (0.5ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:15
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:15
+Completed 422 Unprocessable Entity in 751ms (Views: 0.7ms | ActiveRecord: 106.0ms)
+
+
+Started GET "/storages/1" for 127.0.0.1 at 2018-04-11 15:12:46 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `storage' for #<StoragesController:0x00007faa793b2df8>
+Did you mean?  storage_url):
+  
+app/controllers/storages_controller.rb:8:in `show'
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 15:13:20 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (1.0ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 49ms (Views: 5.7ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-04-11 15:13:58 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (40.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 65ms (Views: 8.5ms | ActiveRecord: 45.8ms)
+
+
+Started GET "/storages/2" for 127.0.0.1 at 2018-04-11 15:14:19 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `storage' for #<StoragesController:0x00007faa78672e18>
+Did you mean?  storage_url):
+  
+app/controllers/storages_controller.rb:8:in `show'
+Started GET "/storages/2" for 127.0.0.1 at 2018-04-11 15:18:40 -0400
+  
+SyntaxError (/Users/spickles/Desktop/GA_Work/dev/Pantry/pantry_app_api/app/controllers/storages_controller.rb:4: syntax error, unexpected '}', expecting =>
+ages.to_json(include: :foods)}
+                              ^
+/Users/spickles/Desktop/GA_Work/dev/Pantry/pantry_app_api/app/controllers/storages_controller.rb:10: syntax error, unexpected '}', expecting =>
+rage.to_json(include: :foods)}
+                              ^
+/Users/spickles/Desktop/GA_Work/dev/Pantry/pantry_app_api/app/controllers/storages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/storages_controller.rb:4: syntax error, unexpected '}', expecting =>
+app/controllers/storages_controller.rb:10: syntax error, unexpected '}', expecting =>
+app/controllers/storages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 15:18:43 -0400
+  
+SyntaxError (/Users/spickles/Desktop/GA_Work/dev/Pantry/pantry_app_api/app/controllers/storages_controller.rb:4: syntax error, unexpected '}', expecting =>
+ages.to_json(include: :foods)}
+                              ^
+/Users/spickles/Desktop/GA_Work/dev/Pantry/pantry_app_api/app/controllers/storages_controller.rb:10: syntax error, unexpected '}', expecting =>
+rage.to_json(include: :foods)}
+                              ^
+/Users/spickles/Desktop/GA_Work/dev/Pantry/pantry_app_api/app/controllers/storages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/storages_controller.rb:4: syntax error, unexpected '}', expecting =>
+app/controllers/storages_controller.rb:10: syntax error, unexpected '}', expecting =>
+app/controllers/storages_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 15:19:17 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (1.0ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 4]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 5]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 6]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 7]]
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 101ms (Views: 0.1ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 15:19:49 -0400
+  
+SyntaxError (/Users/spickles/Desktop/GA_Work/dev/Pantry/pantry_app_api/app/controllers/storages_controller.rb:4: syntax error, unexpected tLABEL
+    render json: status: 200, storages.to_json(include
+                        ^
+/Users/spickles/Desktop/GA_Work/dev/Pantry/pantry_app_api/app/controllers/storages_controller.rb:10: syntax error, unexpected tLABEL
+    render json: status: 200, storage.to_json(include:
+                        ^):
+  
+app/controllers/storages_controller.rb:4: syntax error, unexpected tLABEL
+app/controllers/storages_controller.rb:10: syntax error, unexpected tLABEL
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 15:20:21 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (0.5ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 4]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 5]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 6]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 7]]
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 96ms (Views: 0.1ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/storages/2" for 127.0.0.1 at 2018-04-11 15:20:25 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `storage' for #<StoragesController:0x00007faa7d01e620>
+Did you mean?  storage_url):
+  
+app/controllers/storages_controller.rb:8:in `show'
+Started GET "/storages/2" for 127.0.0.1 at 2018-04-11 15:20:53 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `storage' for #<StoragesController:0x00007faa79e1caf0>
+Did you mean?  storage_url):
+  
+app/controllers/storages_controller.rb:10:in `show'
+Started GET "/foods" for 127.0.0.1 at 2018-04-11 15:28:34 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 64ms (Views: 12.1ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/foods/2" for 127.0.0.1 at 2018-04-11 15:28:42 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 15:29:04 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (0.8ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 4]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 5]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 6]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 7]]
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-04-11 15:48:04 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 58ms (Views: 12.3ms | ActiveRecord: 16.8ms)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (54.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (438.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pantry_app_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (250.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pantry_app_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (1536.5ms)[0m  [1m[35mCREATE DATABASE "pantry_app_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (570.8ms)[0m  [1m[35mCREATE DATABASE "pantry_app_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (45.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (11.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "containers" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (66.2ms)[0m  [1m[35mCREATE TABLE "containers" ("id" bigserial primary key, "name" character varying)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "foods" CASCADE[0m
+  ↳ db/schema.rb:22
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying, "purchased_date" date, "experation_date" date, "storage_id" integer, "container_id" integer)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "storages" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "storages" ("id" bigserial primary key, "name" character varying)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180410165216)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180406160839),
+(20180406192937),
+(20180406195131);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-11 19:48:39.957007"], ["updated_at", "2018-04-11 19:48:39.957007"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "containers" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "containers" ("id" bigserial primary key, "name" character varying)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "foods" CASCADE[0m
+  ↳ db/schema.rb:22
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying, "purchased_date" date, "experation_date" date, "storage_id" integer, "container_id" integer)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "storages" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "storages" ("id" bigserial primary key, "name" character varying)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180410165216)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180406160839),
+(20180406192937),
+(20180406195131);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-11 19:48:40.097025"], ["updated_at", "2018-04-11 19:48:40.097025"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (10.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-04-11 19:48:40.107144"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mStorage Create (1.1ms)[0m  [1m[32mINSERT INTO "storages" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Refridgerator"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mStorage Create (0.4ms)[0m  [1m[32mINSERT INTO "storages" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Freezer"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mStorage Create (0.3ms)[0m  [1m[32mINSERT INTO "storages" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Pantry"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mContainer Create (0.8ms)[0m  [1m[32mINSERT INTO "containers" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Box"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mContainer Create (0.4ms)[0m  [1m[32mINSERT INTO "containers" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Can"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mContainer Create (0.4ms)[0m  [1m[32mINSERT INTO "containers" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Bag"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.4ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.4ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.8ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 2], ["container_id", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.5ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 3], ["container_id", 2]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 3], ["container_id", 2]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 2], ["container_id", 2]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.5ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 1], ["container_id", 2]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 1], ["container_id", 3]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.2ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.2ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.5ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 1], ["container_id", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.2ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.2ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.5ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 1], ["container_id", 2]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.2ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.6ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 3], ["container_id", 2]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mContainer Load (0.2ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Faker::Food"], ["purchased_date", "2018-04-10"], ["experation_date", "2018-04-17"], ["storage_id", 3], ["container_id", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+Started GET "/foods" for 127.0.0.1 at 2018-04-11 15:48:52 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 38ms (Views: 25.1ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 15:49:16 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (0.9ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 98ms (Views: 0.1ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/containers" for 127.0.0.1 at 2018-04-11 15:49:39 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ContainersController):
+  
+actionpack (5.2.0.rc2) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.0.rc2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0.rc2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0.rc2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0.rc2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0.rc2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0.rc2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0.rc2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0.rc2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.2.0.rc2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0.rc2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc2) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/storages/1" for 127.0.0.1 at 2018-04-11 16:05:42 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/storages/1" for 127.0.0.1 at 2018-04-11 16:05:53 -0400
+  
+Processing by StoragesController#show as HTML
+NameError (undefined local variable or method `storage' for #<StoragesController:0x00007fbf34cebc88>
+Did you mean?  storage_url):
+  Parameters: {"id"=>"1"}
+  
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+
+app/controllers/storages_controller.rb:10:in `show'
+  
+NameError (undefined local variable or method `storage' for #<StoragesController:0x00007fbf33cf65d0>
+Did you mean?  storage_url):
+  
+app/controllers/storages_controller.rb:10:in `show'
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 16:14:14 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (1.2ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 92ms (Views: 0.1ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/storages/1" for 127.0.0.1 at 2018-04-11 16:14:22 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `storage' for #<StoragesController:0x00007fbf33d1d6a8>
+Did you mean?  storage_url):
+  
+app/controllers/storages_controller.rb:10:in `show'
+Started GET "/storages/1" for 127.0.0.1 at 2018-04-11 16:14:57 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStorage Load (0.4ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/storages_controller.rb:9
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/storages_controller.rb:10
+Completed 200 OK in 86ms (Views: 0.1ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/foods/1" for 127.0.0.1 at 2018-04-11 16:15:06 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:15:18 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 169ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-04-11 16:15:32 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (5.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:18:12 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"[1]", "container_id"=>"[2]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:19:07 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"(1)", "container_id"=>"(2)"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:19:41 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"\"1\"", "container_id"=>"\"2\""}}
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:21:14 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18"}, "food."=>{"storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:21:28 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18"}, "food.storage_id"=>"1", "food.container_id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:21:44 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:23:43 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"[1]", "container_id"=>"[2]"}}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:24:57 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:25:33 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:25:38 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:25:39 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:25:57 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:26:01 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 16:28:43 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 16:28:49 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (0.5ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 78ms (Views: 0.1ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/storages/1" for 127.0.0.1 at 2018-04-11 16:28:53 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `storage' for #<StoragesController:0x00007fbf34633ad0>
+Did you mean?  storage_url):
+  
+app/controllers/storages_controller.rb:8:in `show'
+Started GET "/storages/1" for 127.0.0.1 at 2018-04-11 16:28:59 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/storages_controller.rb:9
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/storages_controller.rb:10
+Completed 200 OK in 41ms (Views: 0.1ms | ActiveRecord: 17.5ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:29:36 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 64ms (Views: 0.2ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:31:54 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 49ms (Views: 0.2ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:32:47 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 22ms (Views: 0.3ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:32:51 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2018-04-11 16:40:33 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 71ms (Views: 0.9ms | ActiveRecord: 17.1ms)
+
+
+Started POST "/container/1/foods" for 127.0.0.1 at 2018-04-11 16:55:39 -0400
+  [1m[35m (41.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/container/1/foods"):
+  
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc2) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/containers/1/foods" for 127.0.0.1 at 2018-04-11 16:56:23 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}, "container_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mContainer Load (40.6ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 422 Unprocessable Entity in 300ms (Views: 0.3ms | ActiveRecord: 55.9ms)
+
+
+Started POST "/containers/1/storages/2/foods" for 127.0.0.1 at 2018-04-11 16:57:28 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18", "storage_id"=>"1", "container_id"=>"2"}, "container_id"=>"1", "storage_id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mStorage Load (0.6ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mContainer Load (0.4ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mFood Create (0.9ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Burger"], ["purchased_date", "2018-04-11"], ["experation_date", "2018-04-18"], ["storage_id", 2], ["container_id", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (45.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 201 Created in 95ms (Views: 0.4ms | ActiveRecord: 70.1ms)
+
+
+Started POST "/containers/2/storages/2/foods" for 127.0.0.1 at 2018-04-11 16:57:58 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18"}, "container_id"=>"2", "storage_id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mStorage Load (0.4ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mContainer Load (0.5ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mFood Create (0.5ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Burger"], ["purchased_date", "2018-04-11"], ["experation_date", "2018-04-18"], ["storage_id", 2], ["container_id", 2]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/storages/3/containers/1/foods" for 127.0.0.1 at 2018-04-11 16:59:07 -0400
+Processing by FoodsController#create as */*
+  Parameters: {"food"=>{"name"=>"Burger", "purchased_date"=>"2018-04-11", "experation_date"=>"2018-04-18"}, "storage_id"=>"3", "container_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mStorage Load (0.2ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mContainer Load (0.2ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Burger"], ["purchased_date", "2018-04-11"], ["experation_date", "2018-04-18"], ["storage_id", 3], ["container_id", 1]]
+  ↳ app/controllers/foods_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:17
+Completed 201 Created in 37ms (Views: 0.4ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/storages/1" for 127.0.0.1 at 2018-04-11 16:59:13 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStorage Load (0.4ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/storages_controller.rb:9
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/storages_controller.rb:10
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/storages/2" for 127.0.0.1 at 2018-04-11 16:59:20 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStorage Load (0.4ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/storages_controller.rb:9
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/storages/3" for 127.0.0.1 at 2018-04-11 16:59:30 -0400
+Processing by StoragesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/storages_controller.rb:9
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-04-11 16:59:35 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/storages" for 127.0.0.1 at 2018-04-11 16:59:44 -0400
+Processing by StoragesController#index as HTML
+  [1m[36mStorage Load (0.4ms)[0m  [1m[34mSELECT "storages".* FROM "storages"[0m
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/storages_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/storages_controller.rb:4
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
