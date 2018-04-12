@@ -22,6 +22,17 @@ class FoodsController < ApplicationController
     end
   end
 
+  def update
+    food = Food.find(params[:id])
+    food.update(food_params)
+    render(status: 200, json: {food: food})
+  end
+
+  def destroy
+    food = Food.destroy(params[:id])
+    render(status: 204)
+  end
+
   private
 
   def food_params

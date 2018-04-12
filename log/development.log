@@ -1668,3 +1668,103 @@ Processing by StoragesController#index as HTML
 Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/containers" for 127.0.0.1 at 2018-04-11 18:12:19 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/spickles/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+Processing by ContainersController#index as HTML
+  [1m[36mContainer Load (40.9ms)[0m  [1m[34mSELECT "containers".* FROM "containers"[0m
+  ↳ app/controllers/containers_controller.rb:4
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 1]]
+  ↳ app/controllers/containers_controller.rb:4
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 2]]
+  ↳ app/controllers/containers_controller.rb:4
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 3]]
+  ↳ app/controllers/containers_controller.rb:4
+Completed 200 OK in 201ms (Views: 0.2ms | ActiveRecord: 55.9ms)
+
+
+Started GET "/containers/1" for 127.0.0.1 at 2018-04-11 18:36:01 -0400
+Processing by ContainersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContainer Load (0.8ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/containers_controller.rb:9
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 1]]
+  ↳ app/controllers/containers_controller.rb:10
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/foods/11" for 127.0.0.1 at 2018-04-12 11:57:34 -0400
+Processing by FoodsController#update as */*
+  Parameters: {"food"=>{"container_id"=>"2"}, "id"=>"11"}
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:27
+  [1m[36mStorage Load (21.5ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:27
+  [1m[36mFood Update (120.7ms)[0m  [1m[33mUPDATE "foods" SET "container_id" = $1 WHERE "foods"."id" = $2[0m  [["container_id", 2], ["id", 11]]
+  ↳ app/controllers/foods_controller.rb:27
+  [1m[35m (114.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:27
+Completed 200 OK in 363ms (Views: 0.8ms | ActiveRecord: 285.0ms)
+
+
+Started GET "/containers/1" for 127.0.0.1 at 2018-04-12 11:57:41 -0400
+Processing by ContainersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContainer Load (0.4ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/containers_controller.rb:9
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 1]]
+  ↳ app/controllers/containers_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/containers/2" for 127.0.0.1 at 2018-04-12 11:57:46 -0400
+Processing by ContainersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContainer Load (0.4ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/containers_controller.rb:9
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 2]]
+  ↳ app/controllers/containers_controller.rb:10
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/foods/9" for 127.0.0.1 at 2018-04-12 12:03:47 -0400
+Processing by FoodsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:32
+  [1m[36mFood Destroy (0.5ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/foods_controller.rb:32
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:32
+Completed 204 No Content in 44ms (Views: 0.2ms | ActiveRecord: 41.4ms)
+
+
+Started GET "/containers/2" for 127.0.0.1 at 2018-04-12 12:03:55 -0400
+Processing by ContainersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContainer Load (0.5ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/containers_controller.rb:9
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 2]]
+  ↳ app/controllers/containers_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/containers" for 127.0.0.1 at 2018-04-12 12:04:01 -0400
+Processing by ContainersController#index as HTML
+  [1m[36mContainer Load (0.5ms)[0m  [1m[34mSELECT "containers".* FROM "containers"[0m
+  ↳ app/controllers/containers_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 1]]
+  ↳ app/controllers/containers_controller.rb:4
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 2]]
+  ↳ app/controllers/containers_controller.rb:4
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 3]]
+  ↳ app/controllers/containers_controller.rb:4
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
