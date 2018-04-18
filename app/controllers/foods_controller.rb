@@ -4,6 +4,33 @@ class FoodsController < ApplicationController
     render json: {status: 200, foods: foods}
   end
 
+  # Filtered Routes
+  def fridge
+    foods = Food.where(storage_id: 1)
+    render json: {status: 200, foods: foods}
+  end
+  def freezer
+    foods = Food.where(storage_id: 2)
+    render json: {status: 200, foods: foods}
+  end
+  def pantry
+    foods = Food.where(storage_id: 3)
+    render json: {status: 200, foods: foods}
+  end
+  def box
+    foods = Food.where(container_id: 1)
+    render json: {status: 200, foods: foods}
+  end
+  def can
+    foods = Food.where(container_id: 2)
+    render json: {status: 200, foods: foods}
+  end
+  def bag
+    foods = Food.where(container_id: 3)
+    render json: {status: 200, foods: foods}
+  end
+  # End Filtered Routes
+
   def show
     food = Food.find(params[:id])
     render json: {status: 200, food: food}
