@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_19_031213) do
+ActiveRecord::Schema.define(version: 2018_05_19_213700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_05_19_031213) do
     t.date "experation_date"
     t.integer "storage_id"
     t.integer "container_id"
+    t.integer "user_id"
   end
 
   create_table "storages", force: :cascade do |t|

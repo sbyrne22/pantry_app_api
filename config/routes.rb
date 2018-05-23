@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  resources :users do
-    collection do
-      post '/login', to: 'users#login'
-    end
-  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :foods, except: [:create]
   get 'fridge' => 'foods#fridge', :as => 'fridge'
@@ -15,9 +11,16 @@ Rails.application.routes.draw do
   # resources :fridge
   resources :storages
   resources :containers
-  resources :storages, only: [:index, :show] do
-    resources :containers, only: [:index, :show] do
-      resources :foods, only: [:create]
+
+
+  resources :users do
+    collection do
+      post '/login', to: 'users#login'
+    end
+    resources :storages, only: [:index, :show] do
+      resources :containers, only: [:index, :show] do
+        resources :foods, only: [:create]
+      end
     end
   end
 end

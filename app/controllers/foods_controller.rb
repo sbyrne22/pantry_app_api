@@ -40,6 +40,7 @@ class FoodsController < ApplicationController
     food = Food.new(food_params)
     food.storage_id = params[:storage_id]
     food.container_id = params[:container_id]
+    food.user_id = params[:user_id]
 
     if food.save
       render(status: 201, json: {food: food})
@@ -63,6 +64,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.required(:food).permit(:name, :purchased_date, :experation_date, :storage_id, :container_id)
+    params.required(:food).permit(:name, :purchased_date, :experation_date, :storage_id, :container_id, :user_id)
   end
 end
