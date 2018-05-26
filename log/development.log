@@ -17383,3 +17383,2491 @@ Processing by FoodsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/fridge" for 127.0.0.1 at 2018-05-23 18:49:30 -0400
+Processing by FoodsController#fridge as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/foods_controller.rb:10
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bag" for 127.0.0.1 at 2018-05-23 18:49:37 -0400
+Processing by FoodsController#bag as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 3]]
+  ↳ app/controllers/foods_controller.rb:30
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/box" for 127.0.0.1 at 2018-05-23 18:49:39 -0400
+Processing by FoodsController#box as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 1]]
+  ↳ app/controllers/foods_controller.rb:22
+Completed 200 OK in 332ms (Views: 86.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bag" for 127.0.0.1 at 2018-05-23 18:49:42 -0400
+Processing by FoodsController#bag as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 3]]
+  ↳ app/controllers/foods_controller.rb:30
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bag" for 127.0.0.1 at 2018-05-23 18:50:00 -0400
+Processing by FoodsController#bag as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 3]]
+  ↳ app/controllers/foods_controller.rb:30
+Completed 200 OK in 92ms (Views: 90.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 22:28:53 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"e", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (42.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "e"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 261ms (Views: 66.4ms | ActiveRecord: 42.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 22:28:54 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (40.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 44ms (Views: 3.2ms | ActiveRecord: 40.5ms)
+
+
+Started POST "/users/15/storages/1/containers/3/foods" for 127.0.0.1 at 2018-05-23 22:29:11 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"name"=>"Turkey", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2018-05-28T04:00:00.000Z", "storage_id"=>"1", "container_id"=>"3", "user_id"=>"15", "food"=>{"name"=>"Turkey", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2018-05-28T04:00:00.000Z", "storage_id"=>"1", "container_id"=>"3"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mStorage Load (0.5ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mContainer Load (204.5ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mFood Create (18.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Turkey"], ["purchased_date", "2018-05-23"], ["experation_date", "2018-05-28"], ["storage_id", 1], ["container_id", 3], ["user_id", 15]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:45
+Completed 201 Created in 248ms (Views: 0.3ms | ActiveRecord: 235.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 22:29:20 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 22:29:20 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 22:29:26 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"e", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "e"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 125ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 22:29:26 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-23 22:53:03 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 22:53:18 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 94ms (Views: 18.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 22:53:18 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 22:58:05 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 22:58:06 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/1/storages/3/containers/3/foods" for 127.0.0.1 at 2018-05-23 23:00:06 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"name"=>"Pepperoni", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2020-05-23T04:00:00.000Z", "storage_id"=>"3", "container_id"=>"3", "user_id"=>"1", "food"=>{"name"=>"Pepperoni", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2020-05-23T04:00:00.000Z", "storage_id"=>"3", "container_id"=>"3"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mStorage Load (0.5ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mContainer Load (0.5ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mFood Create (0.7ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pepperoni"], ["purchased_date", "2018-05-23"], ["experation_date", "2020-05-23"], ["storage_id", 3], ["container_id", 3], ["user_id", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:45
+Completed 201 Created in 28ms (Views: 0.3ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/fridge" for 127.0.0.1 at 2018-05-23 23:01:30 -0400
+Processing by FoodsController#fridge as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/foods_controller.rb:10
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pantry" for 127.0.0.1 at 2018-05-23 23:01:34 -0400
+Processing by FoodsController#pantry as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/foods_controller.rb:18
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/box" for 127.0.0.1 at 2018-05-23 23:01:44 -0400
+Processing by FoodsController#box as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 1]]
+  ↳ app/controllers/foods_controller.rb:22
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bag" for 127.0.0.1 at 2018-05-23 23:01:46 -0400
+Processing by FoodsController#bag as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 3]]
+  ↳ app/controllers/foods_controller.rb:30
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:01:48 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:03:17 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 86ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:03:17 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/1/storages/3/containers/1/foods" for 127.0.0.1 at 2018-05-23 23:03:58 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"name"=>"Macaroni & Cheese", "purchased_date"=>"2018-05-20T04:00:00.000Z", "experation_date"=>"2018-05-31T04:00:00.000Z", "storage_id"=>"3", "container_id"=>"1", "user_id"=>"1", "food"=>{"name"=>"Macaroni & Cheese", "purchased_date"=>"2018-05-20T04:00:00.000Z", "experation_date"=>"2018-05-31T04:00:00.000Z", "storage_id"=>"3", "container_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Macaroni & Cheese"], ["purchased_date", "2018-05-20"], ["experation_date", "2018-05-31"], ["storage_id", 3], ["container_id", 1], ["user_id", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:45
+Completed 201 Created in 107ms (Views: 0.3ms | ActiveRecord: 41.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:04:18 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 91ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:04:18 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1/storages/1/containers/2/foods" for 127.0.0.1 at 2018-05-23 23:04:57 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"name"=>"Iced Tea", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2018-05-31T04:00:00.000Z", "storage_id"=>"1", "container_id"=>"2", "user_id"=>"1", "food"=>{"name"=>"Iced Tea", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2018-05-31T04:00:00.000Z", "storage_id"=>"1", "container_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mStorage Load (0.3ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mContainer Load (0.2ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mFood Create (0.6ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Iced Tea"], ["purchased_date", "2018-05-23"], ["experation_date", "2018-05-31"], ["storage_id", 1], ["container_id", 2], ["user_id", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:45
+Completed 201 Created in 48ms (Views: 0.6ms | ActiveRecord: 42.2ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:05:14 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:05:14 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1/storages/2/containers/1/foods" for 127.0.0.1 at 2018-05-23 23:05:34 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"name"=>"Ice Cream", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2018-05-30T04:00:00.000Z", "storage_id"=>"2", "container_id"=>"1", "user_id"=>"1", "food"=>{"name"=>"Ice Cream", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2018-05-30T04:00:00.000Z", "storage_id"=>"2", "container_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mStorage Load (0.4ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mContainer Load (0.3ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mFood Create (40.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ice Cream"], ["purchased_date", "2018-05-23"], ["experation_date", "2018-05-30"], ["storage_id", 2], ["container_id", 1], ["user_id", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:45
+Completed 201 Created in 49ms (Views: 0.5ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/fridge" for 127.0.0.1 at 2018-05-23 23:05:52 -0400
+Processing by FoodsController#fridge as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/foods_controller.rb:10
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/freezer" for 127.0.0.1 at 2018-05-23 23:05:55 -0400
+Processing by FoodsController#freezer as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/foods_controller.rb:14
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/box" for 127.0.0.1 at 2018-05-23 23:05:57 -0400
+Processing by FoodsController#box as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 1]]
+  ↳ app/controllers/foods_controller.rb:22
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bag" for 127.0.0.1 at 2018-05-23 23:06:00 -0400
+Processing by FoodsController#bag as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 3]]
+  ↳ app/controllers/foods_controller.rb:30
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/can" for 127.0.0.1 at 2018-05-23 23:06:03 -0400
+Processing by FoodsController#can as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."container_id" = $1[0m  [["container_id", 2]]
+  ↳ app/controllers/foods_controller.rb:26
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:06:07 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:11:43 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 86ms (Views: 12.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:11:43 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (13.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 28ms (Views: 14.2ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:16:41 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 85ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:16:41 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:17:29 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:17:29 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:18:06 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:18:06 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:19:11 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:19:11 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:20:20 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:20:20 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-23 23:20:32 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:20:32 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 141ms (Views: 140.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/1/storages/2/containers/1/foods" for 127.0.0.1 at 2018-05-23 23:21:38 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"name"=>"Pierogies", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2018-05-30T04:00:00.000Z", "storage_id"=>"2", "container_id"=>"1", "user_id"=>"1", "food"=>{"name"=>"Pierogies", "purchased_date"=>"2018-05-23T04:00:00.000Z", "experation_date"=>"2018-05-30T04:00:00.000Z", "storage_id"=>"2", "container_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mStorage Load (0.7ms)[0m  [1m[34mSELECT  "storages".* FROM "storages" WHERE "storages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mContainer Load (0.4ms)[0m  [1m[34mSELECT  "containers".* FROM "containers" WHERE "containers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[36mFood Create (0.7ms)[0m  [1m[32mINSERT INTO "foods" ("name", "purchased_date", "experation_date", "storage_id", "container_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pierogies"], ["purchased_date", "2018-05-23"], ["experation_date", "2018-05-30"], ["storage_id", 2], ["container_id", 1], ["user_id", 1]]
+  ↳ app/controllers/foods_controller.rb:45
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:45
+Completed 201 Created in 26ms (Views: 0.4ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/fridge" for 127.0.0.1 at 2018-05-23 23:21:45 -0400
+Processing by FoodsController#fridge as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/foods_controller.rb:10
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-23 23:21:48 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-24 15:28:07 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (21.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 121ms (Views: 2.9ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-24 15:28:08 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (3.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-24 15:29:27 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 77ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-24 15:29:27 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (6.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-24 15:39:00 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-24 15:39:00 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-24 15:39:30 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-24 15:39:30 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-24 15:39:36 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-24 15:39:36 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (8.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-24 15:47:03 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 78ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-24 15:47:04 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-24 15:47:15 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 79ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-24 15:47:15 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (12.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 16ms (Views: 3.6ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-24 15:47:59 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 77ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-24 15:47:59 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (2.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:02:52 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (70.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 279ms (Views: 20.1ms | ActiveRecord: 70.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:02:53 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:03:17 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 105ms (Views: 22.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:03:17 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:11:06 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 95ms (Views: 0.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:11:06 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (15.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 37ms (Views: 20.8ms | ActiveRecord: 15.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:12:21 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:12:21 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:13:49 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 90ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:13:49 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:14:11 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 78ms (Views: 0.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:14:11 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:16:24 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 82ms (Views: 0.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:16:24 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:16:59 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 79ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:17:00 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 124ms (Views: 123.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:17:17 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (42.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 116ms (Views: 0.6ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:17:17 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (13.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 18ms (Views: 4.0ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:18:47 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:18:47 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:19:27 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:19:27 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 63ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:20:14 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:20:14 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:21:46 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 76ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:21:46 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:24:46 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 76ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:24:46 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:25:18 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:25:21 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:25:21 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (6.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-25 21:36:08 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 83ms (Views: 2.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-25 21:36:09 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 00:53:51 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (41.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 122ms (Views: 2.6ms | ActiveRecord: 41.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 00:53:51 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (4.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 00:54:05 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 00:54:05 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (3.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 01:02:11 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 89ms (Views: 1.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 01:02:11 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (2.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 01:03:30 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 01:03:30 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 01:04:23 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 01:04:23 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 01:04:48 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 01:04:48 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 01:05:51 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 01:05:51 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 01:25:19 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (30.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 119ms (Views: 3.9ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 01:25:20 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (6.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 10:55:31 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (22.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 101ms (Views: 2.6ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 10:55:32 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (27.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 35ms (Views: 6.5ms | ActiveRecord: 27.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 10:56:14 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 10:56:14 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 10:56:50 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 10:56:50 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 11:07:56 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 76ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 11:07:56 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (3.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 12:19:26 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 86ms (Views: 5.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 12:19:27 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (9.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 32ms (Views: 22.3ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 12:23:42 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 85ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 12:23:43 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 12:25:14 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 12:25:14 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 12:45:30 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 151ms (Views: 24.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 12:45:30 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (26.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 56ms (Views: 29.3ms | ActiveRecord: 26.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 13:16:21 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 81ms (Views: 2.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 13:16:22 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (15.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 22ms (Views: 5.8ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:02:19 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 83ms (Views: 2.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:02:19 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (29.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 37ms (Views: 6.7ms | ActiveRecord: 29.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:03:26 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:03:29 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 78ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:03:29 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:04:44 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:04:44 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:06:58 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 86ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:06:58 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (5.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 13ms (Views: 7.2ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:08:18 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:08:18 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:08:57 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:08:57 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:09:18 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:09:18 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:09:39 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:09:39 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:09:54 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:09:54 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:10:07 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:10:07 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:10:18 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:10:18 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (19.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 24ms (Views: 4.2ms | ActiveRecord: 19.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:10:52 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:10:52 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:11:27 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:11:27 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:11:41 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:11:41 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:12:23 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:12:23 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:13:42 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:13:42 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:13:50 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 88ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:13:50 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:14:12 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:14:12 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:14:39 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:14:39 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:14:59 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:14:59 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (3.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:15:09 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 76ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:15:09 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 84ms (Views: 83.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:15:21 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:15:21 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:15:33 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:15:33 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:15:42 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:15:42 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:15:50 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:15:50 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:17:08 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:17:08 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:17:46 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 96ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:17:46 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:18:12 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:18:12 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:19:00 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:19:00 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:19:20 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:19:20 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:22:58 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 90ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:22:58 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (7.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:25:53 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 88ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:25:53 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:27:08 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:27:08 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (2.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:27:20 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 77ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:27:20 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (6.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:27:59 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:28:00 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-26 15:28:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 139ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-26 15:28:31 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-26 15:28:41 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:28:50 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:28:50 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:29:09 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:29:09 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:29:20 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:29:20 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:29:32 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:29:32 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:29:40 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:29:40 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:33:19 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:33:19 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:34:21 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:34:21 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:35:11 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 85ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:35:11 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:36:26 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 88ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:36:26 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:38:21 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:38:22 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (5.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:43:31 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 83ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:43:31 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (8.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:44:33 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:44:33 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:45:23 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 76ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:45:23 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (10.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 14ms (Views: 3.1ms | ActiveRecord: 10.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:48:02 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:48:02 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:48:38 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:48:38 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:49:04 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:49:04 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:49:46 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:49:47 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:50:34 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:50:34 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:51:24 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:51:24 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:51:44 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:51:44 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:52:01 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:52:01 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:52:28 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:52:28 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:53:00 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:53:00 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (11.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 34ms (Views: 22.3ms | ActiveRecord: 11.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:54:03 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:54:03 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:54:43 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:54:43 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:55:54 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:55:54 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 15:56:09 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:56:09 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fridge" for 127.0.0.1 at 2018-05-26 15:57:00 -0400
+Processing by FoodsController#fridge as HTML
+  [1m[36mFood Load (1.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 1]]
+  ↳ app/controllers/foods_controller.rb:10
+Completed 200 OK in 89ms (Views: 25.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/freezer" for 127.0.0.1 at 2018-05-26 15:57:03 -0400
+Processing by FoodsController#freezer as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 2]]
+  ↳ app/controllers/foods_controller.rb:14
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pantry" for 127.0.0.1 at 2018-05-26 15:57:06 -0400
+Processing by FoodsController#pantry as HTML
+  [1m[36mFood Load (1.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."storage_id" = $1[0m  [["storage_id", 3]]
+  ↳ app/controllers/foods_controller.rb:18
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 15:57:08 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:00:58 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 86ms (Views: 4.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:00:58 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (7.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:01:24 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:01:24 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:03:06 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:03:06 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:04:28 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:04:28 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:05:01 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:05:01 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:06:35 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:06:35 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:07:01 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:07:01 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:13:07 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 86ms (Views: 2.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:13:07 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (4.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:14:26 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:14:26 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:15:18 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:15:18 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:17:04 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 82ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:17:04 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:17:39 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:17:39 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:43:29 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 1.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:43:29 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:44:28 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:44:28 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:44:41 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:44:41 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:45:24 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:45:24 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:45:31 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:45:32 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:45:40 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:45:40 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:52:19 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:52:19 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:52:33 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:52:33 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:52:40 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 73ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:52:41 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:54:11 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 74ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:54:11 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-26 16:54:17 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:54:51 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:54:51 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:55:14 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:55:14 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:56:41 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 72ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:56:41 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:56:57 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 75ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:56:57 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-05-26 16:57:26 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"Tim", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/foods" for 127.0.0.1 at 2018-05-26 16:57:26 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+
+
